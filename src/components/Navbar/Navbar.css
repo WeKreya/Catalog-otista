@@ -1,0 +1,82 @@
+/* General Navbar Styles */
+.navbar {
+    display: flex;
+    position: sticky;
+    top: 0;
+    align-items: center;
+    background-color: white;
+    padding: 16px 50px;
+    color: #09101d;
+    z-index: 100;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-right: 60px;
+}
+.navbar-logo>img{
+    height: 45px;
+}
+
+.navbar-links {
+    display: flex;
+    list-style: none;
+    z-index: 100;
+}
+
+.navbar-links li {
+    margin-left: 2rem;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #09101d;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.navbar-toggle-icon {
+    width: 25px;
+    height: 3px;
+    background-color: #09101d;
+    margin: 4px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 14px 24px;
+        justify-content: space-between;
+    }
+    .navbar-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: white;
+        flex-direction: column;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+    }
+
+    .navbar-links.open {
+        max-height: 200px;
+    }
+
+    .navbar-links li {
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+}
