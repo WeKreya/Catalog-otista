@@ -33,7 +33,7 @@ function Detail() {
 
     return (
         <div className="detail">
-            <button>
+            <button onClick={() => navigate(-1)}>
                 <IoIosArrowBack />
                 <h5>Kembali</h5>
             </button>
