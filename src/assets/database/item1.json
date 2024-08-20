@@ -1,0 +1,64 @@
+[
+    {
+        "id": 1,
+        "foto": [
+            "https://drive.google.com/thumbnail?id=1le6F0QFBpkWRNzNcTnitdIrPyPvmh49D&sz=w900-h900",
+            "https://drive.google.com/thumbnail?id=1WlmxtDJUBDtedCQJukRsTelbkUQF81Xn&sz=w900-h900"
+        ],
+        "nama_produk": "NKV 550 Ventilator with SpO2",
+        "type": "NKV-550 Ventilator with SpO2",
+        "merk": "NIHON KOHDEN",
+        "pemilik_merk": "NIHON KOHDEN CORPORATION",
+        "jenis_produk": "AKL",
+        "no_izin_edar": "AKL20403916426",
+        "perusahaan_distributor": "PT. INDOMEDIK NIAGA PERKASA",
+        "pabrik": "NIHON KOHDEN ORANGEMED, LLC",
+        "garansi": "2 Tahun",
+        "spare_part": "Ada",
+        "lainnya": "Ventilator for Neonate to Adult Patient",
+        "asal_produk": "Jepang",
+        "serial_number": [
+            { "id": "12345678", "position": "Ruang Mawar" },
+            { "id": "12345678", "position": "Ruang Mawar" },
+            { "id": "12345678", "position": "Ruang Mawar" },
+            { "id": "12345678", "position": "Ruang Mawar" },
+            { "id": "12345678", "position": "Ruang Mawar" },
+            { "id": "12345678", "position": "Ruang Mawar" },
+            { "id": "12345678", "position": "Ruang Mawar" },
+            { "id": "12345678", "position": "Ruang Mawar" }
+        ],
+        "tahun": "2023",
+        "dana": "DAK",
+        "harga": 10000000,
+        "deskripsi": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "manual_book": "https://drive.google.com/file/d/10QHfhd0qT4GpzG9K9RpUXKbQr7_bseHz/view?usp=drive_link",
+        "service_manual": "https://drive.google.com/file/d/10QHfhd0qT4GpzG9K9RpUXKbQr7_bseHz/view?usp=drive_link",
+        "berita_acara": "https://drive.google.com/file/d/10QHfhd0qT4GpzG9K9RpUXKbQr7_bseHz/view?usp=drive_link",
+        "kalibrasi": "11 Agustus 2024",
+        "sertifikat_kalibrasi": "https://drive.google.com/file/d/10QHfhd0qT4GpzG9K9RpUXKbQr7_bseHz/view?usp=drive_link",
+        "pemakaian": [
+            "11 Agustus 2024: O2 Cell khusus dan harus ganti setahun sekali",
+            "15 Agustus 2024: O2 Cell khusus dan harus ganti setahun sekali",
+            "25 Agustus 2024: O2 Cell khusus dan harus ganti setahun sekali"
+        ],
+        "maintenance": [
+            "Penggantian filter",
+            "Penggantian flow sensor",
+            "Penggantian capilier"
+        ],
+        "pemeliharaan": [
+            "11 Agustus 2024",
+            "14 Agustus 2024",
+            "16 Agustus 2024",
+            "20 Agustus 2024",
+            "24 Agustus 2024",
+            "28 Agustus 2024"
+        ],
+        "perbaikan": [
+            "11 Agustus 2024: O2 Cell khusus dan harus ganti setahun sekali",
+            "15 Agustus 2024: O2 Cell khusus dan harus ganti setahun sekali",
+            "25 Agustus 2024: O2 Cell khusus dan harus ganti setahun sekali"
+        ],
+        "contact_distributor": "0888-1234-1234"
+    }
+]

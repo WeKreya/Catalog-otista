@@ -15,7 +15,7 @@
     align-items: center;
     gap: 12px;
 }
-.footer-content-logo>img{
+.footer-content-logo > img {
     height: 68px;
 }
 .footer-content-info {
@@ -49,10 +49,13 @@
     font-size: 12px;
     font-weight: 400;
     line-height: 120%;
-    color: #858C94;
+    color: #858c94;
 }
 
 @media (max-width: 768px) {
+    .footer {
+        padding: 24px;
+    }
     .footer-content {
         flex-direction: column;
     }

@@ -2,8 +2,12 @@ import React from "react";
 import Hero from "../../assets/img/home/Hero.png";
 import "./Home.css";
 import Item from "../Item/Item";
+import Data from "../../assets/database/item.json";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+    const navigate = useNavigate();
+
     return (
         <div className="home">
             <div className="home-hero">
@@ -31,10 +35,14 @@ function Home() {
             <div className="home-catalog">
                 <h5>Catalogues</h5>
                 <div className="home-catalog-item">
-                    <Item />
+                    {Data.slice(0, 4).map((item, index) => {
+                        return <Item key={index} item={item} />;
+                    })}
                 </div>
                 <div className="home-catalog-button">
-                    <button>Lihat Semuanya</button>
+                    <button onClick={() => navigate("/catalog")}>
+                        Lihat Semuanya
+                    </button>
                 </div>
             </div>
         </div>
