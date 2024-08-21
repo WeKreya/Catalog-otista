@@ -57,7 +57,7 @@
     gap: 12px;
 }
 .catalog-filter-button > .filter {
-    display: flex;
+    display: none;
     gap: 6px;
     align-items: center;
     height: max-content;
@@ -83,7 +83,11 @@
 
 .catalog-content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+}
+.catalog-content-main {
+    display: flex;
+    justify-content: start;
     flex-wrap: wrap;
     flex: 1 0 0;
     gap: 24px;
@@ -92,40 +96,35 @@
 .catalog-page {
     display: flex;
     justify-content: center;
-    gap: 12px;
-    margin: 24px;
+    list-style: none;
+    gap: 8px;
+    margin: 24px 0;
 }
-
-.catalog-page > button {
-    width: 36px;
-    height: 36px;
-    border: 0;
-    font-size: 20px;
-    border-radius: 8px;
-    color: white;
-    background-color: #088340;
-}
-.catalog-page > button:disabled {
-    cursor: not-allowed;
-    background-color: #ebeef2;
-}
-
-.catalog-page-number {
+.catalog-page .page-number a,
+.catalog-page .previous,
+.catalog-page .next {
     display: flex;
-    gap: 12px;
-}
-
-.catalog-page-number > button {
+    justify-content: center;
+    align-items: center;
     width: 36px;
     height: 36px;
     border: 0;
     font-size: 15px;
-    font-weight: 400;
     border-radius: 8px;
-    color: #09101d;
-    background-color: transparent;
+    cursor: pointer;
 }
-.catalog-page-number > button.active {
+.catalog-page .previous,
+.catalog-page .next {
+    color: white;
+    background-color: #088340;
+}
+.catalog-page .previous.disabled,
+.catalog-page .next.disabled {
+    cursor: not-allowed;
+    background-color: #ebeef2;
+}
+
+.catalog-page .page-number.selected a {
     background-color: #ebeef2;
 }
 
@@ -137,15 +136,14 @@
         align-items: center;
         flex-direction: column;
     }
-    .catalog-filter-group{
+    .catalog-filter-group {
         align-items: start;
         flex-direction: column;
         width: 100%;
         height: 72px;
         overflow: hidden;
-        
     }
-    .catalog-filter-group.active{
+    .catalog-filter-group.active {
         height: 100%;
     }
     .catalog-filter-group > .catalog-filter-input {
@@ -154,5 +152,12 @@
     .catalog-filter-input input,
     .catalog-filter-input select {
         width: 100%;
+    }
+    .catalog-filter-button > .filter {
+        display: flex;
+    }
+    
+    .catalog-content-main {
+        justify-content: center;
     }
 }
