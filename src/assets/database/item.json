@@ -1,8 +1,8 @@
 [
     {
         "foto": [
-            "../src/assets/img/item/item.jpg",
-            "../src/assets/img/item/item.png"
+            "https://drive.google.com/thumbnail?id=1le6F0QFBpkWRNzNcTnitdIrPyPvmh49D&sz=w900-h900",
+            "https://drive.google.com/thumbnail?id=1WlmxtDJUBDtedCQJukRsTelbkUQF81Xn&sz=w900-h900"
         ],
         "nama_produk": "Ventilator 1",
         "type": "Type 1",

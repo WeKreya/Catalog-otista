@@ -42,13 +42,13 @@ function Detail() {
                     <img src={mainImage} alt={data.title} />
                     <div className="detail-main-img-thumb">
                         {data.foto.map((image, index) => (
-                                <img
-                                    key={index}
-                                    src={image}
-                                    alt={`Thumbnail ${index + 1}`}
-                                    onClick={() => handleThumbnailClick(image)}
-                                />
-                            ))}
+                            <img
+                                key={index}
+                                src={image}
+                                alt={`Thumbnail ${index + 1}`}
+                                onClick={() => handleThumbnailClick(image)}
+                            />
+                        ))}
                     </div>
                 </div>
                 <div className="detail-main-title">
@@ -57,9 +57,7 @@ function Detail() {
                     <p>{data.asal_produk}</p>
                 </div>
             </div>
-            <div className="detail-tabs">
-                <Tab data={data}/>
-            </div>
+            <Tab data={data} />
         </div>
     );
 }
