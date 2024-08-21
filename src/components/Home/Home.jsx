@@ -3,7 +3,7 @@ import Hero from "../../assets/img/home/Hero.png";
 import About2 from "../../assets/img/home/about2.png";
 import "./Home.css";
 import Item from "../Item/Item";
-import Data from "../../assets/database/item.json";
+import Data from "../../assets/database/item-catalog.json";
 import { useNavigate } from "react-router-dom";
 
 function Home() {

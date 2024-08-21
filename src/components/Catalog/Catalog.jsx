@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Item from "../Item/Item";
-import Data from "../../assets/database/item.json";
+import Data from "../../assets/database/item-catalog.json";
 import "./Catalog.css";
 import { IoIosArrowBack, IoIosArrowForward, IoIosSearch } from "react-icons/io";
 import ReactPaginate from "react-paginate";

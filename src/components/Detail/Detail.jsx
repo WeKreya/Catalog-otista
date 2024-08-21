@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Detail.css";
-import Data from "../../assets/database/item.json";
+import Data from "../../assets/database/item-catalog.json";
 import { useNavigate, useParams } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import Tab from "./Tab/Tab";
