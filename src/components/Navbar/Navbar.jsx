@@ -11,22 +11,25 @@ const Navbar = () => {
         setMobileMenuOpen(!isMobileMenuOpen);
     };
 
-    console.log(isMobileMenuOpen);
-
     return (
         <nav className="navbar">
-            <div className="navbar-logo">
+            <Link to='' className="navbar-logo">
                 <img src={Logo} />
                 <img src={Otista} />
+            </Link>
+            <div className={`navbar-links ${isMobileMenuOpen ? "open" : ""}`}>
+                <ul>
+                    <li>
+                        <Link to="/">Beranda</Link>
+                    </li>
+                    <li>
+                        <Link to="/catalog">Catalog</Link>
+                    </li>
+                </ul>
+                <button onClick={() => navigate("/catalog")}>
+                    Cari Semua Barang
+                </button>
             </div>
-            <ul className={`navbar-links ${isMobileMenuOpen ? "open" : ""}`}>
-                <li>
-                    <Link to="/">Beranda</Link>
-                </li>
-                <li>
-                    <Link to="/catalog">Catalog</Link>
-                </li>
-            </ul>
             <div className="navbar-toggle" onClick={toggleMobileMenu}>
                 <span className="navbar-toggle-icon"></span>
                 <span className="navbar-toggle-icon"></span>

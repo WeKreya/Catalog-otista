@@ -1,5 +1,6 @@
 import React from "react";
 import Hero from "../../assets/img/home/Hero.png";
+import About2 from "../../assets/img/home/about2.png";
 import "./Home.css";
 import Item from "../Item/Item";
 import Data from "../../assets/database/item.json";
@@ -12,24 +13,46 @@ function Home() {
         <div className="home">
             <div className="home-hero">
                 <h3>Rumah Sakit Umum Daerah</h3>
-                <h1>OTISTA BANDUNG</h1>
-                <button>Cari Semua Barang</button>
+                <h1>OTO ISKANDAR DI NATA</h1>
+                <h1>BANDUNG</h1>
             </div>
             <div className="home-about">
-                <img src={Hero} />
-                <div className="home-about-content">
-                    <h5>About</h5>
-                    <p>
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex
-                        ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum."
-                    </p>
+                <div className="home-about1">
+                    <img src={Hero} />
+                    <div className="home-about-content">
+                        <h5>
+                            Selamat Datang <br /> di RSUD OTISTA Bandung
+                        </h5>
+                        <div className="line"></div>
+                        <p>
+                            Selamat datang di Website RSUD Oto Iskandar Di Nata
+                            Kab. Bandung. Website ini sebagai sarana informasi
+                            data inventaris pengadaan dan kalibrasi untuk
+                            memberikan Informasi tentang pengadaan Alkes dan
+                            Aldok Rumah Sakit Umum Daerah Otista Kab. Bandung.
+                        </p>
+                    </div>
+                </div>
+                <div className="home-about2">
+                    <div className="home-about-content">
+                        <h5>
+                            Instalasi Pemeliharaan Sarana Rumah Sakit (IPSRS)
+                        </h5>
+                        <div className="line"></div>
+                        <p>
+                            Instalasi Pemeliharaan Sarana & Prasarana Rumah
+                            Sakit (IPSRS) adalah suatu unit fungsional untuk
+                            melaksanakan kegiatan teknis instalasi, pemeliharaan
+                            dan perbaikan, agar fasilitas yang menunjang
+                            pelayanan kesehatan di rumah sakit yaitu sarana,
+                            prasarana dan peralatan alat kesehatan RS selalu
+                            berada dalam keadaan layak pakai guna menunjang
+                            pelayanan kesehatan yang paripurna dan prima kepada
+                            pelanggan. Semua urusan teknis dan manajerial ada di
+                            IPSRS.
+                        </p>
+                    </div>
+                    <img src={About2} />
                 </div>
             </div>
             <div className="home-catalog">

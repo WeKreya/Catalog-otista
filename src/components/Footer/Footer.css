@@ -67,4 +67,7 @@
     .footer-content-info {
         width: 100%;
     }
+    .footer-content-info > .info-item > p {
+        max-width: 100%;
+    }
 }
