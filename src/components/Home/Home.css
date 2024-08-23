@@ -1,5 +1,7 @@
+
 .home {
     display: block;
+    
 }
 
 .home-hero {
@@ -47,6 +49,8 @@
 .home-about {
     display: flex;
     flex-direction: column;
+    max-width: 1536px;
+    margin: auto;
 }
 .home-about1,
 .home-about2 {
@@ -84,8 +88,10 @@
 .home-catalog {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    max-width: 1536px;
+    margin: auto;
     padding: 32px 50px;
+    gap: 24px;
 }
 .home-catalog > h5 {
     font-size: 25px;
@@ -107,7 +113,7 @@
 }
 .home-catalog-item {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex: 1 0 0;
     flex-wrap: wrap;
     gap: 24px;

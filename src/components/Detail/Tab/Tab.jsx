@@ -6,6 +6,11 @@ function Tab({ data }) {
 
     console.log(data);
 
+    const convertToParagraph = (string) => {
+        const withLineBreaks = string.replace(/\n/g, "<br />");
+        return { __html: withLineBreaks };
+    };
+
     const renderContent = () => {
         if (activeTab === "spesifikasi") {
             return (
@@ -49,7 +54,7 @@ function Tab({ data }) {
                     </div>
                     <div className="row">
                         <h5>Informasi Lainnya</h5>
-                        <p>{data.lainnya}</p>
+                        <p dangerouslySetInnerHTML={convertToParagraph(data.lainnya)}></p>
                     </div>
                     <div className="row">
                         <h5>Asal Negara</h5>
@@ -122,40 +127,32 @@ function Tab({ data }) {
                     <div className="row">
                         <h5>Barang Habis Pakai</h5>
                         <ul>
-                            {data.pemakaian.map((data, i) =>{
-                                return(
-                                    <li>{data}</li>
-                                )
+                            {data.pemakaian.map((data, i) => {
+                                return <li>{data}</li>;
                             })}
                         </ul>
                     </div>
                     <div className="row">
                         <h5>Preventive Maintenance</h5>
                         <ul>
-                            {data.maintenance.map((data, i) =>{
-                                return(
-                                    <li>{data}</li>
-                                )
+                            {data.maintenance.map((data, i) => {
+                                return <li>{data}</li>;
                             })}
                         </ul>
                     </div>
                     <div className="row">
                         <h5>Pemeliharaan</h5>
                         <ul>
-                            {data.pemeliharaan.map((data, i) =>{
-                                return(
-                                    <li>{data}</li>
-                                )
+                            {data.pemeliharaan.map((data, i) => {
+                                return <li>{data}</li>;
                             })}
                         </ul>
                     </div>
                     <div className="row">
                         <h5>Perbaikan</h5>
                         <ul>
-                            {data.perbaikan.map((data, i) =>{
-                                return(
-                                    <li>{data}</li>
-                                )
+                            {data.perbaikan.map((data, i) => {
+                                return <li>{data}</li>;
                             })}
                         </ul>
                     </div>

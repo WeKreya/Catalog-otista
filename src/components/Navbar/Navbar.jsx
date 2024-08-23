@@ -1,11 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Navbar.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Logo from "../../assets/img/home/Logo.png";
 import Otista from "../../assets/img/home/Otista.png";
 
 const Navbar = () => {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [active, setActive] = useState(1);
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.pathname === "/") {
+            setActive(1);
+        } else if (location.pathname === "/catalog"){
+            setActive(2);
+        } else{
+            setActive(0);
+        }
+    }, [location.pathname]);
 
     const toggleMobileMenu = () => {
         setMobileMenuOpen(!isMobileMenuOpen);
@@ -13,17 +26,29 @@ const Navbar = () => {
 
     return (
         <nav className="navbar">
-            <Link to='' className="navbar-logo">
+            <Link to="" className="navbar-logo">
                 <img src={Logo} />
                 <img src={Otista} />
             </Link>
             <div className={`navbar-links ${isMobileMenuOpen ? "open" : ""}`}>
                 <ul>
-                    <li>
-                        <Link to="/">Beranda</Link>
+                    <li
+                        className={`navbar-links-item ${
+                            active == 1 ? "active" : ""
+                        }`}
+                    >
+                        <Link to="/" onClick={() => setActive(1)}>
+                            Beranda
+                        </Link>
                     </li>
-                    <li>
-                        <Link to="/catalog">Catalog</Link>
+                    <li
+                        className={`navbar-links-item ${
+                            active == 2 ? "active" : ""
+                        }`}
+                    >
+                        <Link to="/catalog" onClick={() => setActive(2)}>
+                            Semua Katalog
+                        </Link>
                     </li>
                 </ul>
                 <button onClick={() => navigate("/catalog")}>

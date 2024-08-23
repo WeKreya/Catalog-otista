@@ -1,5 +1,7 @@
 .catalog {
     padding: 32px 50px;
+    max-width: 1536px;
+    margin: auto;
 }
 
 .catalog > h5 {
@@ -25,6 +27,7 @@
 .catalog-filter > .catalog-filter-group {
     display: flex;
     align-items: end;
+    flex-wrap: wrap;
     gap: 24px;
 }
 .catalog-filter-group > .catalog-filter-input {
@@ -47,12 +50,17 @@
 
 .catalog-filter-input input,
 .catalog-filter-input select {
-    width: 15vw;
+    width: 250px;
     border: 1px solid #dadee3;
     padding: 12px 16px;
     border-radius: 8px;
 }
 .catalog-filter-button {
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+}
+.catalog-filter-button > div {
     display: flex;
     gap: 12px;
 }
@@ -69,7 +77,20 @@
     color: white;
     background-color: #a5abb3;
 }
-.catalog-filter-button > .search {
+.catalog-filter-button .reset {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    height: max-content;
+    padding: 10px 16px;
+    font-size: 15px;
+    font-weight: 400;
+    border: 0;
+    border-radius: 8px;
+    color: white;
+    background-color: #a5abb3;
+}
+.catalog-filter-button .search {
     display: flex;
     height: max-content;
     padding: 10px 16px;
@@ -87,7 +108,7 @@
 }
 .catalog-content-main {
     display: flex;
-    justify-content: start;
+    justify-content: space-around;
     flex-wrap: wrap;
     flex: 1 0 0;
     gap: 24px;
@@ -153,10 +174,13 @@
     .catalog-filter-input select {
         width: 100%;
     }
+    .catalog-filter-button {
+        width: 100%;
+    }
     .catalog-filter-button > .filter {
         display: flex;
     }
-    
+
     .catalog-content-main {
         justify-content: center;
     }

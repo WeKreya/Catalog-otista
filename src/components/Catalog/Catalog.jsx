@@ -31,6 +31,15 @@ function Catalog() {
         });
     };
 
+    const handleReset = () => {
+        setSearch("");
+        setFilters({
+            asal_produk: "",
+            ruangan: "",
+            tahun: "",
+        });
+    };
+
     const handleSearch = () => {
         const searchQuery = search.toLowerCase();
         const filtered = Data.filter((item) => {
@@ -44,13 +53,17 @@ function Catalog() {
                 item.type,
             ];
 
-            const matchesSearch = searchFields.some(field =>
+            const matchesSearch = searchFields.some((field) =>
                 field.toLowerCase().includes(searchQuery)
             );
 
             const matchesFilters =
-                (!filters.asal_produk || item.asal_produk === filters.asal_produk) &&
-                (!filters.ruangan || item.serial_number.some(serial => serial.position === filters.ruangan)) &&
+                (!filters.asal_produk ||
+                    item.asal_produk === filters.asal_produk) &&
+                (!filters.ruangan ||
+                    item.serial_number.some(
+                        (serial) => serial.position === filters.ruangan
+                    )) &&
                 (!filters.tahun || item.tahun === filters.tahun);
 
             return matchesSearch && matchesFilters;
@@ -136,9 +149,15 @@ function Catalog() {
                         onClick={() => setfilterActive(!filterActive)}
                     >
                         <CiFilter />
-                        Filter
                     </button>
-                    <button className="search" onClick={handleSearch}>Search</button>
+                    <div>
+                        <button className="reset" onClick={handleReset}>
+                            Reset
+                        </button>
+                        <button className="search" onClick={handleSearch}>
+                            Search
+                        </button>
+                    </div>
                 </div>
             </div>
             <div className="line"></div>

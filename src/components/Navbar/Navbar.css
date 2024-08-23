@@ -8,6 +8,8 @@
     padding: 16px 50px;
     color: #09101d;
     z-index: 100;
+    max-width: 1536px;
+    margin: auto;
 }
 
 .navbar-logo {
@@ -32,15 +34,19 @@
     z-index: 100;
 }
 
-.navbar-links li {
+.navbar-links-item {
     margin-left: 2rem;
 }
 
-.navbar-links a {
+.navbar-links-item a  {
     text-decoration: none;
     color: #09101d;
     font-size: 15px;
     font-weight: 400;
+}
+.navbar-links-item.active a  {
+    font-weight: 600;
+    color: #088340;
 }
 .navbar-links button {
     justify-self: center;
@@ -49,6 +55,7 @@
     border-radius: 8px;
     color: white;
     background: #088340;
+    cursor: pointer;
 }
 
 .navbar-toggle {
