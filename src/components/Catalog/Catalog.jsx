@@ -32,15 +32,6 @@ function Catalog() {
         });
     };
 
-    const handleReset = () => {
-        setSearch("");
-        setFilters({
-            asal_produk: "",
-            ruangan: "",
-            tahun: "",
-        });
-    };
-
     const handleSearch = () => {
         const searchQuery = search.toLowerCase();
         const filtered = Data.filter((item) => {
@@ -72,6 +63,17 @@ function Catalog() {
 
         setFilteredItems(filtered);
         setCurrent(1);
+    };
+
+    const handleReset = () => {
+        setSearch("");
+        setFilters({
+            asal_produk: "",
+            ruangan: "",
+            tahun: "",
+        });
+        setFilteredItems(Data); 
+        setCurrent(1); 
     };
 
     const paginate = (e) => {
