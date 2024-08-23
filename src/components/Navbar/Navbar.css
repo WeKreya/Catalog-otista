@@ -1,15 +1,18 @@
 /* General Navbar Styles */
 .navbar {
-    display: flex;
     position: sticky;
     top: 0;
-    align-items: center;
     background-color: white;
     padding: 16px 50px;
-    color: #09101d;
     z-index: 100;
+}
+
+.navbar-content {
+    display: flex;
+    align-items: center;
     max-width: 1536px;
     margin: auto;
+    color: #09101d;
 }
 
 .navbar-logo {
@@ -38,13 +41,13 @@
     margin-left: 2rem;
 }
 
-.navbar-links-item a  {
+.navbar-links-item a {
     text-decoration: none;
     color: #09101d;
     font-size: 15px;
     font-weight: 400;
 }
-.navbar-links-item.active a  {
+.navbar-links-item.active a {
     font-weight: 600;
     color: #088340;
 }

@@ -13,9 +13,9 @@ const Navbar = () => {
     useEffect(() => {
         if (location.pathname === "/") {
             setActive(1);
-        } else if (location.pathname === "/catalog"){
+        } else if (location.pathname === "/catalog") {
             setActive(2);
-        } else{
+        } else {
             setActive(0);
         }
     }, [location.pathname]);
@@ -26,39 +26,43 @@ const Navbar = () => {
 
     return (
         <nav className="navbar">
-            <Link to="" className="navbar-logo">
-                <img src={Logo} />
-                <img src={Otista} />
-            </Link>
-            <div className={`navbar-links ${isMobileMenuOpen ? "open" : ""}`}>
-                <ul>
-                    <li
-                        className={`navbar-links-item ${
-                            active == 1 ? "active" : ""
-                        }`}
-                    >
-                        <Link to="/" onClick={() => setActive(1)}>
-                            Beranda
-                        </Link>
-                    </li>
-                    <li
-                        className={`navbar-links-item ${
-                            active == 2 ? "active" : ""
-                        }`}
-                    >
-                        <Link to="/catalog" onClick={() => setActive(2)}>
-                            Semua Katalog
-                        </Link>
-                    </li>
-                </ul>
-                <button onClick={() => navigate("/catalog")}>
-                    Cari Semua Barang
-                </button>
-            </div>
-            <div className="navbar-toggle" onClick={toggleMobileMenu}>
-                <span className="navbar-toggle-icon"></span>
-                <span className="navbar-toggle-icon"></span>
-                <span className="navbar-toggle-icon"></span>
+            <div className="navbar-content">
+                <Link to="" className="navbar-logo">
+                    <img src={Logo} />
+                    <img src={Otista} />
+                </Link>
+                <div
+                    className={`navbar-links ${isMobileMenuOpen ? "open" : ""}`}
+                >
+                    <ul>
+                        <li
+                            className={`navbar-links-item ${
+                                active == 1 ? "active" : ""
+                            }`}
+                        >
+                            <Link to="/" onClick={() => setActive(1)}>
+                                Beranda
+                            </Link>
+                        </li>
+                        <li
+                            className={`navbar-links-item ${
+                                active == 2 ? "active" : ""
+                            }`}
+                        >
+                            <Link to="/catalog" onClick={() => setActive(2)}>
+                                Semua Katalog
+                            </Link>
+                        </li>
+                    </ul>
+                    <button onClick={() => navigate("/catalog")}>
+                        Cari Semua Barang
+                    </button>
+                </div>
+                <div className="navbar-toggle" onClick={toggleMobileMenu}>
+                    <span className="navbar-toggle-icon"></span>
+                    <span className="navbar-toggle-icon"></span>
+                    <span className="navbar-toggle-icon"></span>
+                </div>
             </div>
         </nav>
     );
