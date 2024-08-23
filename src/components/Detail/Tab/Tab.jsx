@@ -7,11 +7,16 @@ function Tab({ data }) {
     console.log(data);
 
     const convertToParagraph = (string) => {
-        const withLineBreaks = string.replace(/\n/g, "<br />");
-        return { __html: withLineBreaks };
+        const formattedText = string
+            .replace(/\*\*(.*?)\*\*/g, "<b>$1</b>") // **text** for bold
+            .replace(/__(.*?)__/g, "<u>$1</u>") // __text__ for underline
+            .replace(/_(.*?)_/g, "<i>$1</i>") // _text_ for italic
+            .replace(/\n/g, "<br />"); // Handle line breaks
+            return { __html: formattedText };
     };
 
     const renderContent = () => {
+        // TAB 1
         if (activeTab === "spesifikasi") {
             return (
                 <div className="tabs-content-main">
@@ -23,6 +28,10 @@ function Tab({ data }) {
                     <div className="row">
                         <h5>Tipe</h5>
                         <p>{data.type}</p>
+                    </div>
+                    <div className="row">
+                        <h5>Merk</h5>
+                        <p>{data.merk}</p>
                     </div>
                     <div className="row">
                         <h5>Nama Pemilik Merk</h5>
@@ -62,6 +71,7 @@ function Tab({ data }) {
                     </div>
                 </div>
             );
+        // TAB 2
         } else if (activeTab === "pengadaan") {
             return (
                 <div className="tabs-content-main">
@@ -120,6 +130,7 @@ function Tab({ data }) {
                     </div>
                 </div>
             );
+        // TAB 3
         } else if (activeTab === "progress") {
             return (
                 <div className="tabs-content-main">
@@ -155,6 +166,10 @@ function Tab({ data }) {
                                 return <li>{data}</li>;
                             })}
                         </ul>
+                    </div>
+                    <div className="row">
+                        <h5>Nomor Teknisi Distributor</h5>
+                        <p>{data.contact_distributor}</p>
                     </div>
                 </div>
             );

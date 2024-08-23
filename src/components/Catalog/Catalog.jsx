@@ -5,6 +5,7 @@ import "./Catalog.css";
 import { IoIosArrowBack, IoIosArrowForward, IoIosSearch } from "react-icons/io";
 import ReactPaginate from "react-paginate";
 import { CiFilter } from "react-icons/ci";
+import { ruangan, tahun, negara } from "./filter";
 
 function Catalog() {
     const [filterActive, setfilterActive] = useState(false);
@@ -64,7 +65,7 @@ function Catalog() {
                     item.serial_number.some(
                         (serial) => serial.position === filters.ruangan
                     )) &&
-                (!filters.tahun || item.tahun === filters.tahun);
+                (!filters.tahun || item.tahun == filters.tahun);
 
             return matchesSearch && matchesFilters;
         });
@@ -114,8 +115,8 @@ function Catalog() {
                             onChange={handleFilterChange}
                         >
                             <option value="">Search</option>
-                            <option value="Negara 1">Negara 1</option>
-                            <option value="Negara 2">Negara 2</option>
+                            <option value="jepang">jepang</option>
+                            <option value="eropa">eropa</option>
                         </select>
                     </div>
                     <div className="catalog-filter-input">

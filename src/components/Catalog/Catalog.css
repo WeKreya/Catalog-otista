@@ -50,7 +50,7 @@
 
 .catalog-filter-input input,
 .catalog-filter-input select {
-    width: 250px;
+    width: 200px;
     border: 1px solid #dadee3;
     padding: 12px 16px;
     border-radius: 8px;
@@ -101,6 +101,12 @@
     color: white;
     background-color: #088340;
 }
+.catalog-filter-button .search:hover {
+    background-color: #0AA450;
+}
+.catalog-filter-button .reset:hover {
+    background-color: #999da1;
+}
 
 .catalog-content {
     display: flex;
@@ -108,7 +114,7 @@
 }
 .catalog-content-main {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     flex-wrap: wrap;
     flex: 1 0 0;
     gap: 24px;
