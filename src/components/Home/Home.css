@@ -114,8 +114,6 @@
 .home-catalog-item {
     display: flex;
     justify-content: space-around;
-    flex: 1 0 0;
-    flex-wrap: wrap;
     gap: 24px;
 }
 
