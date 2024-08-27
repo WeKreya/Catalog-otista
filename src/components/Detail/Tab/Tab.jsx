@@ -12,7 +12,7 @@ function Tab({ data }) {
             .replace(/__(.*?)__/g, "<u>$1</u>") // __text__ for underline
             .replace(/_(.*?)_/g, "<i>$1</i>") // _text_ for italic
             .replace(/\n/g, "<br />"); // Handle line breaks
-            return { __html: formattedText };
+        return { __html: formattedText };
     };
 
     const renderContent = () => {
@@ -63,7 +63,11 @@ function Tab({ data }) {
                     </div>
                     <div className="row">
                         <h5>Informasi Lainnya</h5>
-                        <p dangerouslySetInnerHTML={convertToParagraph(data.lainnya)}></p>
+                        <p
+                            dangerouslySetInnerHTML={convertToParagraph(
+                                data.lainnya
+                            )}
+                        ></p>
                     </div>
                     <div className="row">
                         <h5>Asal Negara</h5>
@@ -71,7 +75,7 @@ function Tab({ data }) {
                     </div>
                 </div>
             );
-        // TAB 2
+            // TAB 2
         } else if (activeTab === "pengadaan") {
             return (
                 <div className="tabs-content-main">
@@ -87,13 +91,15 @@ function Tab({ data }) {
                     <div className="row">
                         <h5>Serial Number</h5>
                         <div className="value">
-                            {data.serial_number.map((number, i) => {
-                                return (
-                                    <p key={i}>
-                                        {number.id} - {number.position}
-                                    </p>
-                                );
-                            })}
+                            <ul>
+                                {data.serial_number.map((number, i) => {
+                                    return (
+                                        <li key={i}>
+                                            {number.id} - {number.position}
+                                        </li>
+                                    );
+                                })}
+                            </ul>
                         </div>
                     </div>
                     <div className="row">
@@ -130,7 +136,7 @@ function Tab({ data }) {
                     </div>
                 </div>
             );
-        // TAB 3
+            // TAB 3
         } else if (activeTab === "progress") {
             return (
                 <div className="tabs-content-main">

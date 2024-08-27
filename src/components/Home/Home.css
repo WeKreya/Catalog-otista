@@ -111,6 +111,9 @@
     color: white;
     background: #088340;
 }
+.home-catalog-button > button:hover {
+    background-color: #0AA450;
+}
 .home-catalog-item {
     display: flex;
     justify-content: space-around;

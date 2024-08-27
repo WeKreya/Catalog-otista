@@ -54,6 +54,10 @@
     font-size: 15px;
     font-weight: 400;
 }
+.tabs-content-main > .row ul {
+    margin-left: 16px;
+
+}
 .tabs-content-main > .row li {
     margin-bottom: 10px;
 }
